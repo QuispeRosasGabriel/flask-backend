@@ -1,0 +1,89 @@
+ * Serving Flask app "app.main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 290-261-206
+ * Serving Flask app "app.main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 290-261-206
+190.234.105.11 - - [16/Apr/2021 01:21:39] "[37mPOST /api/login/ HTTP/1.1[0m" 200 -
+190.234.105.11 - - [16/Apr/2021 01:22:05] "[37mPOST /api/login/ HTTP/1.1[0m" 200 -
+190.234.105.11 - - [16/Apr/2021 01:23:56] "[37mPOST /api/login/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 01:26:05] "[33mGET /api HTTP/1.1[0m" 404 -
+200.106.36.82 - - [16/Apr/2021 01:26:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+200.106.36.82 - - [16/Apr/2021 01:26:13] "[32mGET /api/users HTTP/1.1[0m" 308 -
+200.106.36.82 - - [16/Apr/2021 01:26:13] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
+200.106.36.82 - - [16/Apr/2021 01:36:40] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+162.142.125.56 - - [16/Apr/2021 01:39:24] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.56 - - [16/Apr/2021 01:39:25] "[37mGET / HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 01:40:59] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+200.106.36.82 - - [16/Apr/2021 01:44:58] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+200.106.36.82 - - [16/Apr/2021 01:45:09] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
+200.106.36.82 - - [16/Apr/2021 01:45:37] "[33mGET /api/users' HTTP/1.1[0m" 404 -
+200.106.36.82 - - [16/Apr/2021 01:46:04] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+200.106.36.82 - - [16/Apr/2021 01:47:07] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+200.106.36.82 - - [16/Apr/2021 01:48:08] "[32mOPTIONS /api/users HTTP/1.1[0m" 308 -
+190.234.105.11 - - [16/Apr/2021 01:49:33] "[35m[1mPOST /api/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/dist-packages/flask_restx/api.py", line 652, in error_router
+    return original_handler(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/dist-packages/flask_restx/api.py", line 652, in error_router
+    return original_handler(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1912, in raise_routing_exception
+    raise FormDataRoutingRedirect(request)
+flask.debughelpers.FormDataRoutingRedirect: b'A request was sent to this URL (http://ec2-3-142-255-53.us-east-2.compute.amazonaws.com/api/login) but a redirect was issued automatically by the routing system to "http://ec2-3-142-255-53.us-east-2.compute.amazonaws.com/api/login/".  The URL was defined with a trailing slash so Flask will automatically redirect to the URL with the trailing slash if it was accessed without one.  Make sure to directly send your POST-request to this URL since we can\'t make browsers or HTTP clients redirect with form data reliably or without user interaction.\n\nNote: this exception is only raised in debug mode'
+200.106.36.82 - - [16/Apr/2021 01:50:40] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 01:50:41] "[31m[1mPOST /api/users/ HTTP/1.1[0m" 409 -
+190.234.105.11 - - [16/Apr/2021 01:50:53] "[32mGET /api/users HTTP/1.1[0m" 308 -
+190.234.105.11 - - [16/Apr/2021 01:50:53] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
+190.234.105.11 - - [16/Apr/2021 01:50:55] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
+190.234.105.11 - - [16/Apr/2021 01:54:29] "[37mPOST /api/login/ HTTP/1.1[0m" 200 -
+209.17.96.90 - - [16/Apr/2021 02:00:30] "[37mGET / HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:01:54] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:01:54] "[31m[1mPOST /api/users/ HTTP/1.1[0m" 409 -
+200.106.36.82 - - [16/Apr/2021 02:04:32] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:04:32] "[31m[1mPOST /api/users/ HTTP/1.1[0m" 409 -
+159.89.176.246 - - [16/Apr/2021 02:12:33] "[33mPOST /b65f8b5/u4bz1zb7mg829x14/ HTTP/1.1[0m" 404 -
+200.106.36.82 - - [16/Apr/2021 02:24:22] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:24:22] "[31m[1mPOST /api/users/ HTTP/1.1[0m" 409 -
+200.106.36.82 - - [16/Apr/2021 02:29:10] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:29:11] "[37mPOST /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:31:52] "[37mOPTIONS /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 02:31:53] "[37mPOST /api/users/ HTTP/1.1[0m" 200 -
+200.106.36.82 - - [16/Apr/2021 03:23:53] "[33mGET /api HTTP/1.1[0m" 404 -
+200.106.36.82 - - [16/Apr/2021 03:23:59] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
+200.106.36.82 - - [16/Apr/2021 03:30:26] "[31m[1mGET /api/users/ HTTP/1.1[0m" 401 -
